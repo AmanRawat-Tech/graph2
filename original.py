@@ -25,7 +25,7 @@ def plot_dynamic_data_multiple_msn(msn_filters, date_filter, column_filter):
         return
  
     # Plotting the specified column for each msn in the list
-    plt.figure(figsize=(20, 6))
+    plt.figure(figsize=(20, 10))
  
     for msn in msn_filters:
         msn_data = filtered_data[filtered_data['msn'] == msn]
@@ -68,7 +68,7 @@ with col1:
             selected_msn.append('SML3000263')
     if len(selected_msn)!=0:
         with coll22:
-            temp=st.text_input("Please Enter the Date(1-30)")
+            temp=st.text_input("Please Enter the Date of November Month 2024(1-30)")
             if temp:
                 try:
                     temp1=int(temp)
