@@ -68,17 +68,22 @@ with col1:
             selected_msn.append('SML3000263')
     if len(selected_msn)!=0:
         with coll22:
-            temp=st.text_input("Please Enter the Date of November Month 2024(1-30)")
-            if temp:
-                try:
-                    temp1=int(temp)
-                    while temp1< 1 or temp1>30:
-                        st.write("Please Enter The Valid Date")
-                        temp=st.text_input("Re-enter:",'enter')
-                        temp1=int(temp)
-                except ValueError:
-                    st.write("Please enter a valid number.")
-            st.write(f"you have selected : {temp}")
+            
+            temp1=st.number_input("Please Enter the Date of November Month 2024(1-30)", min_value=1, max_value=30)
+                # # temp1=int(temp)
+                # if  temp1< 1 or temp1>30:
+                #     st.write("Password is wrong please re-enter it")
+                # else:break
+                # # if temp:
+                # #     try:
+                # #         temp1=int(temp)
+                # #         while temp1< 1 or temp1>30:
+                # #             st.write("Please Enter The Valid Date")
+                # #             temp=st.text_input("Re-enter:")
+                # #             temp1=int(temp)
+                # #     except ValueError:
+                # #         st.write("Please enter a valid number.")
+            st.write(f"you have selected : {temp1}")
             st.write('Please Select Parameter')
             option3 = st.selectbox('',('v_ave','i_ave','wh_imp','vah_imp'))
             st.write(f"you have selected: {option3}")
